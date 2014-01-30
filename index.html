@@ -1,0 +1,486 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Js</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+  <script  src="js/angular.js"></script>
+  <script  src="js/app.js"></script>
+  <script  src="js/directives/todo.js"></script>
+</head>
+<body ng-app="slide" style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>¿Cual es el estado actual de las aplicaciónes web?</h2>
+    </hgroup>
+    <article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li><b>Front-end</b> es la parte del software que interactúa con el o los usuarios</li>
+          <li><b>Back-end</b> es la parte que procesa la entrada desde el Front-end</li>
+          <li><b>DOM</b>'Modelo de Objetos del Documento' o 'Modelo en Objetos para la Representación de Documentos') es esencialmente una interfaz de programación de aplicaciones</li>
+        </ul>
+      </section>
+    </aside>
+    <br>
+      <ul>
+        <b>HTML</b>
+         <ul>
+           <li>Excelente para documentos estaticos.</li>
+           <li>Soportado por la mayoria de los dispositivos.</li>
+         </ul>
+      </ul>
+      <br>
+      <ul>
+        <b>Lenguajes y Frameworks</b>
+          <ul>
+            <li>Buenos para la creación de aplicacíones dinamicas.</li>
+            <li>Excelentes para manejar y procesar información.</li>
+            <li>Manejo del Back-end y Front-end.</li>
+          </ul>
+      </ul>
+      <br>
+      <ul>
+        <b>JQuery</b>
+        <ul>
+          <li>Excelente para transferir informacion entre el DOM y el servidor.</li>
+        </ul>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>¿Que puede suceder cuando comenzamos a mezclar todas estas?</h2>
+    </hgroup>
+    <article>
+        <ul class="build">
+            <h3>-Exceso de codigo.</h3>
+            <h3>-Sobretiempo en desarrollo.</h3>
+            <h3>-Bajo Performance.</h3>
+            <h3>-Poca Escalabilidad.</h3>
+            <h3>-Mayor Dependencia.</h3>
+        </ul>
+    </article>
+  </slide>
+
+
+  
+  <slide>
+    <hgroup>
+      <h2>¿Que es Angular Js?</h2>
+    </hgroup>
+    <article>
+      <p><b>Angular Js</b> es un framework desarrollado por Google, explicitamente para el procesamiento , manejo y transferencias de datos, en el DOM.</p>
+      <h3>Caracteristicas que destacan en Angular Js:</h3>
+      <ul class="build" >
+         <li>Permite ampliar el vocabulario HTML para la aplicación.</li>
+         <li>Destaca en ser:</li>
+            <ul class="build">
+              <li>Expresivo.</li>
+              <li>Facil del leer.</li>
+              <li>Rapido para desarrollar.</li>
+            </ul>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note" >
+        <section>
+           <ul>
+             <li><b>Separación de la lógica de presentación de la vista</b></li>
+             <li><b>Facilidad a la hora de manipular los elementos del DOM</b></li>
+             <li><b>Modelo de datos (data binding)</b></li>
+           </ul>
+        </section>
+    </aside>
+    <hgroup>
+      <h2>¿Que lo diferencian de otros frameworks actuales?</h2>
+    </hgroup>
+    <article>
+      <p>Actualmente Angular Js es una alternativa, en cuanto a los frameworks para el Front-end.</p>
+      <p>Sin embargo, en estos momentos es respaldado por una de las empresas mas grandes en aplicaciones web y tecnologia, Google.</p>
+
+      <p>Aunque si duda, Angular Js destaca entre  otros frameworks, que actualmente se dedican a abstraer el HTML,CSS y JS o simplemente manipulan el DOM, mientras que Google ataca el problema de raiz.</p>
+
+      <br>
+
+      <ul class="build fade">
+        <li><h2>HTML no se ha diseñado para vistas dinamicas.</h2></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>¿Que nos propone Angular Js?</h2>
+    </hgroup>
+    <article class="smaller">
+      <aside class="note">
+        <section>
+          <li><a href="http://briantford.com/blog/huuuuuge-angular-apps.html">Estructura de directorios</a></li>
+        </section>
+      </aside>
+      <p>Angular Js propone un manejo del framework adecuado para la mayoria de los programadores, bastante familiar a la estructura de la mayoria de framworks y lenguajes de programacion cliente-servidor.</p>
+
+      <h3>Su estructura contiene:</h3>
+
+      <ul>
+        <li>Injección de dependencias.</li>
+        <li>Modulos.</li>
+        <li>Fabricas.</li>
+        <li>Servicios.</li>
+        <li>Controladores.</li>
+        <li>Modelos de enrutamiento.</li>
+        <li>Vistas.</li>
+      </ul>
+
+      <p>Por eso es conocido por tener una estructura MVVM (Modelo -> Vista -> Lo que sea) </p>
+
+    </article>
+  </slide>
+
+  <slide hidden>
+    Hidden slides are left out of the presentation.
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ejemplo: {{name}} </h2>
+    </hgroup>
+    <article class="small">
+      <pre class="prettyprint" data-lang="html">
+        &lt;!doctype html>
+        &lt;html <b>ng-app</b>>
+          &lt;head>
+            &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js">&lt;/script>
+          &lt;/head>
+          &lt;body>
+            &lt;div>
+              &lt;label>Name: <input type="text"  ng-model="name"  placeholder="Enter a name here" />  &lt;/label>
+              &lt;input type="text" ng-model="<b>yourName</b>" placeholder="Enter a name here">
+              &lt;hr>
+              &lt;h1>Ejemplo: {{ <b>yourName</b> }} &lt;/h1> 
+            &lt;/div>
+          &lt;/body>
+        &lt;/html>
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Algunos de los elementos más utilizados</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+        // Declaración de un Modulo
+        var myAppModule = angular.module('myApp', []);
+      </pre>
+
+      <pre class="prettyprint" data-lang="javascript">
+        // Declaración de un Controlador
+        myAppModule.controller('GreetingCtrl', function($scope) {
+           $scope.greeting = 'Hola!';
+        });
+      </pre>
+
+      <pre class="prettyprint" data-lang="javascript">
+        // Declaración de Directivas
+        myAppModule.directive('ExampleDirective', function () {
+          return {
+            restrict: 'AE',
+            templateUrl:'js/partials/exapmle.html',
+            link: function (scope, iElement, iAttrs) {
+               scope.example = "Hola";
+            }
+          }
+        })
+      </pre>
+
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Aplicación ejemplo</h2>
+    </hgroup>
+    <article>
+      <todoex></todoex>
+    </article>
+  </slide>
+
+
+  
+  <slide>
+  <hgroup>
+    <h2>Como se conforma?</h2>
+  </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="html">
+      &lt;div class="todo" >
+        
+      &lt;form>
+
+        &lt;h1>Servicios&lt;/h1>
+
+        &lt;ul>
+          &lt;li ng-repeat="service in services" ng-click="toggleActive(service)" ng-class="{active:service.active}">
+            {{service.name}} &lt;span>{{service.price | currency}}&lt;/span>
+          &lt;/li>
+        &lt;/ul>
+
+        &lt;div class="total">
+          Total: &lt;span>{{<b>total() | currency</b>}}&lt;/span>
+        &lt;/div>
+
+      &lt;/form>
+
+      &lt;/div>
+
+    </pre>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+        // Declaración de un Modulo
+        var slide = angular.module('slide', []);
+      </pre>
+
+      <pre class="prettyprint" data-lang="javascript">
+        // Declaración de Directivas
+        slide.directive('todoex', [function () {
+        return {
+          restrict: 'E',
+          templateUrl: 'directives/todo.html' ,
+          controller: function ($scope) {
+               $scope.services = [.....];
+          
+               $scope.toggleActive = function(s){
+                  s.active = !s.active;
+                };
+
+               $scope.total = function(){
+
+               var total = 0;
+
+               angular.forEach($scope.services, function(s){
+                 if (s.active){
+                   total+= s.price;
+                 }
+               });
+
+               return total;
+            }
+        };
+      }]);
+      </pre>
+
+    </article>
+  </slide>
+
+
+ <slide>
+  <hgroup>
+    <h2>Que nos beneficios trae?</h2>
+  </hgroup>
+  <article>
+    <ul class="build fade" >
+
+          <h3> - Mayor orden.</h3>
+          <h3> - Control total del DOM.</h3>
+          <h3> - Velocidad.</h3>
+          <h3> - Aplicaciónes mas genericas.</h3>
+          <h3> - Menos tiempo en desarrollo.</h3>
+          <h3> - Menor dependencia de tecnologias.</h3>
+
+    </ul>
+  </article>
+ </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
+        </ul>
+        <p><b>Remember to say this tag line!</b></p>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>Diversificación:</h2>
+    </hgroup>
+    <article>
+     <p>Actualmente Angular Js, esta comenzado ha impactar mucho en el desarrollo Front-end , tanto que muchos Forks de javascript he incluso , frameworks  han comenzado ha crear versiones para Angular Js , mas conocidas como librerias,</p>
+
+     <h3>Entre ellos:</h3>
+        <ul >
+            <h3>-Bootstrap</h3>
+            <h3>-Hammer</h3>
+            <h3>-Jquery</h3>
+            <h3><a href="http://ngmodules.org/">Muchos Mas</a></h3>
+        </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Continuo Desarrollo:</h2>
+    </hgroup>
+    <article>
+     <p>Angular ha demostrado que en poco tiempo ha avanzado demasiado, es tal el avance que posiblemente sea uno de los proyectos de javascript, con mas liberacion de versiones al año.</p>
+
+     <p>Una de sus mayores inteciones es crear un framework , con la menor cantidad de dependencias posibles, hasta ahora es uno de los cuantos frameworks Front- end que no necesita JQuery.</p>
+    <img src="images/castor.png" style="float:right;" class="reflect" alt="">
+    </article>
+  </slide>
+
+
+  <slide>
+    <aside class="note">
+      <section>
+        <ul>
+          <li><a href="http://www.hellothemes.com/es/blog-es/angularjs-y-el-futuro-del-desarrollo-web/">AngularJS y el futuro del desarrollo web</a></li>
+        </ul>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>AngularJS y el futuro del desarrollo web</h2>
+    </hgroup>
+    <article>
+     <p>"En plena “era HTML5″ y Web 2.0 pocos son los que discuten que Javascript y CSS3 son los reyes absolutos en lo que respecta al desarrollo “front-end”. Los sitios web son mucho más dinámicos (algunas web´s ya parecen incluso verdaderas aplicaciones de escritorio) de forma que la experiencia del usuario mejora notablemente."</p>
+
+     <p>Angular Js no solo ha mostrado, un nuevo camino en el Front-end, si no que tambien ha mejorado la experencia de las aplicaciones web.</p>
+    <img src="images/angularjs.png" style="float:right;" class="reflect" alt="">
+    </article>
+  </slide>
+
+ 
+
+  
+
+  
+  
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Conclusión</h2>
+      <h3>"Opinion"</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
+    <hgroup>
+      <h2 class="white">Conlusión</h2>
+    </hgroup>
+    <article  class="white" >
+      <p>Angular sin duda puede ser una gran herramienta, durante el tiempo que la he utilizado, realmente me he sentido muy a gusto, de verdad que es muy facil desarrollar aplicaciónes de esta manera. </p>
+
+      <p>Los invito ha usarla, si tienen dudas o preguntas al respecto con mucho gusto tratare de ayudarles en lo que mas pueda.</p>
+
+      <img src="images/github.png" alt="">
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <q>
+        Esto ha sido AngularJs For Dummies.
+      </q>
+      <div class="author">
+        Nombre:  Alejandro Orozco Builes<br>
+        Compañia:  Intergrupo
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
+    </article>
+  </slide>
+
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Gracias!!!!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

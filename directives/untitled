@@ -1,0 +1,24 @@
+&lt;!-- Declare a new AngularJS app and associate the controller -->
+&lt;div class="todo" >
+	
+&lt;form>
+
+	&lt;h1>Servicios&lt;/h1>
+
+	&lt;ul>
+		&lt;!-- Loop through the services array, assign a click handler, and set or
+			remove the "active" css class if needed -->
+		&lt;li ng-repeat="service in services" ng-click="toggleActive(service)" ng-class="{active:service.active}">
+			&lt;!-- Notice the use of the currency filter, it will format the price -->
+			{{service.name}} &lt;span>{{service.price | currency}}&lt;/span>
+		&lt;/li>
+	&lt;/ul>
+
+	&lt;div class="total">
+		&lt;!-- Calculate the total price of all chosen services. Format it as currency. -->
+		Total: &lt;span>{{total() | currency}}&lt;/span>
+	&lt;/div>
+
+&lt;/form>
+
+&lt;/div>

@@ -333,14 +333,14 @@ SlideDeck.prototype.loadConfig_ = function(config) {
 
       html = [p.name, p.company].join('<br>');
 
-      var gplus = p.gplus ? '<span>g+</span><a href="' + p.gplus +
+      var gplus = p.gplus ? '<span>Gmail:</span><a href="' + p.gplus +
           '">' + p.gplus.replace(/https?:\/\//, '') + '</a>' : '';
 
-      var twitter = p.twitter ? '<span>twitter</span>' +
-          '<a href="http://twitter.com/' + p.twitter + '">' +
+      var twitter = p.twitter ? '<span>Intergrupo:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +
+          '<a href="#"' + p.twitter + '">' +
           p.twitter + '</a>' : '';
 
-      var www = p.www ? '<span>www</span><a href="' + p.www +
+      var www = p.www ? '<span>Sección</span>&nbsp;&nbsp;<a href="' + p.www +
                         '">' + p.www.replace(/https?:\/\//, '') + '</a>' : '';
 
       var github = p.github ? '<span>github</span><a href="' + p.github +

@@ -2,7 +2,7 @@ var SLIDE_CONFIG = {
   // Slide settings
   settings: {
     title: 'Angular Js<br>For Dummies',
-    subtitle: '¿Que es? ¿De que trata? ¿Que usos puede tener? ',
+    subtitle: '',
     useBuilds: true, // Default: true. False will turn off slide animation builds.
     usePrettify: true, // Default: true
     enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
@@ -18,12 +18,12 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'Alejandro Orozco',
+    name: 'Alejandro Orozco Builes',
     company: 'Practicante, Intergrupo',
-    gplus: 'http://plus.google.com/1234567890',
-    twitter: '@yourhandle',
-    www: 'http://www.you.com',
-    github: 'http://github.com/you'
+    gplus: 'aorozcobuiles@gmail.com',
+    twitter: 'aorozcob@intergrupo.com',
+    www: 'IG Mobile',
+    github: ''
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
