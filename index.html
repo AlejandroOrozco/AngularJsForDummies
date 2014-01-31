@@ -22,8 +22,11 @@ URL: https://code.google.com/p/io-2012-slides
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
   <script  src="js/angular.js"></script>
+  <script  src="js/firebase.js"></script>
+  <script  src="js/angularfire.js"></script>
   <script  src="js/app.js"></script>
   <script  src="js/directives/todo.js"></script>
+  <script  src="js/directives/chat.js"></script>
 </head>
 <body ng-app="slide" style="opacity: 0">
 
@@ -47,7 +50,7 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>¿Cual es el estado actual de las aplicaciónes web?</h2>
+      <h2>¿Cual es el estado actual de las aplicaciones web?</h2>
     </hgroup>
     <article>
     <aside class="note">
@@ -55,7 +58,7 @@ URL: https://code.google.com/p/io-2012-slides
         <ul>
           <li><b>Front-end</b> es la parte del software que interactúa con el o los usuarios</li>
           <li><b>Back-end</b> es la parte que procesa la entrada desde el Front-end</li>
-          <li><b>DOM</b>'Modelo de Objetos del Documento' o 'Modelo en Objetos para la Representación de Documentos') es esencialmente una interfaz de programación de aplicaciones</li>
+          <li><b>DOM</b> Modelo de Objetos del Documento  o Modelo en Objetos para la Representación de Documentos es esencialmente una interfaz de programación de aplicaciones</li>
         </ul>
       </section>
     </aside>
@@ -63,7 +66,7 @@ URL: https://code.google.com/p/io-2012-slides
       <ul>
         <b>HTML</b>
          <ul>
-           <li>Excelente para documentos estaticos.</li>
+           <li>Excelente para documentos estáticos.</li>
            <li>Soportado por la mayoria de los dispositivos.</li>
          </ul>
       </ul>
@@ -71,7 +74,7 @@ URL: https://code.google.com/p/io-2012-slides
       <ul>
         <b>Lenguajes y Frameworks</b>
           <ul>
-            <li>Buenos para la creación de aplicacíones dinamicas.</li>
+            <li>Buenos para la creación de aplicaciones dinámicas.</li>
             <li>Excelentes para manejar y procesar información.</li>
             <li>Manejo del Back-end y Front-end.</li>
           </ul>
@@ -80,7 +83,7 @@ URL: https://code.google.com/p/io-2012-slides
       <ul>
         <b>JQuery</b>
         <ul>
-          <li>Excelente para transferir informacion entre el DOM y el servidor.</li>
+          <li>Excelente para transferir información  entre el DOM y el servidor.</li>
         </ul>
       </ul>
     </article>
@@ -92,7 +95,7 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
     <article>
         <ul class="build">
-            <h3>-Exceso de codigo.</h3>
+            <h3>-Exceso de código.</h3>
             <h3>-Sobretiempo en desarrollo.</h3>
             <h3>-Bajo Performance.</h3>
             <h3>-Poca Escalabilidad.</h3>
@@ -108,15 +111,15 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>¿Que es Angular Js?</h2>
     </hgroup>
     <article>
-      <p><b>Angular Js</b> es un framework desarrollado por Google, explicitamente para el procesamiento , manejo y transferencias de datos, en el DOM.</p>
-      <h3>Caracteristicas que destacan en Angular Js:</h3>
+      <p><b>Angular Js</b> es un framework desarrollado por Google, explícitamente  para el procesamiento , manejo y transferencias de datos, en el DOM.</p>
+      <h3>Características que destacan en Angular Js:</h3>
       <ul class="build" >
          <li>Permite ampliar el vocabulario HTML para la aplicación.</li>
          <li>Destaca en ser:</li>
             <ul class="build">
               <li>Expresivo.</li>
-              <li>Facil del leer.</li>
-              <li>Rapido para desarrollar.</li>
+              <li>Fácil  del leer.</li>
+              <li>Rápido  para desarrollar.</li>
             </ul>
       </ul>
     </article>
@@ -137,14 +140,14 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
     <article>
       <p>Actualmente Angular Js es una alternativa, en cuanto a los frameworks para el Front-end.</p>
-      <p>Sin embargo, en estos momentos es respaldado por una de las empresas mas grandes en aplicaciones web y tecnologia, Google.</p>
+      <p>Sin embargo, en estos momentos es respaldado por una de las empresas mas grandes en aplicaciones web y tecnología, Google.</p>
 
-      <p>Aunque si duda, Angular Js destaca entre  otros frameworks, que actualmente se dedican a abstraer el HTML,CSS y JS o simplemente manipulan el DOM, mientras que Google ataca el problema de raiz.</p>
+      <p>Aunque si duda, Angular Js destaca entre  otros frameworks, que actualmente se dedican a abstraer el HTML,CSS y JS o simplemente manipulan el DOM, mientras que Google ataca el problema de raíz.</p>
 
       <br>
 
       <ul class="build fade">
-        <li><h2>HTML no se ha diseñado para vistas dinamicas.</h2></li>
+        <li><h2>HTML no se ha diseñado para vistas dinámicas.</h2></li>
       </ul>
     </article>
   </slide>
@@ -159,21 +162,23 @@ URL: https://code.google.com/p/io-2012-slides
           <li><a href="http://briantford.com/blog/huuuuuge-angular-apps.html">Estructura de directorios</a></li>
         </section>
       </aside>
-      <p>Angular Js propone un manejo del framework adecuado para la mayoria de los programadores, bastante familiar a la estructura de la mayoria de framworks y lenguajes de programacion cliente-servidor.</p>
+      <p>Angular Js propone un manejo del framework adecuado para la mayoría de los programadores, bastante familiar a la estructura de la mayoría de framworks y lenguajes de programación cliente-servidor.</p>
 
       <h3>Su estructura contiene:</h3>
 
       <ul>
-        <li>Injección de dependencias.</li>
-        <li>Modulos.</li>
+        <li>Inyección de dependencias.</li>
+        <li>Módulos.</li>
         <li>Fabricas.</li>
         <li>Servicios.</li>
         <li>Controladores.</li>
+        <li>Directivas.</li>
+        <li>Filtros.</li>
         <li>Modelos de enrutamiento.</li>
         <li>Vistas.</li>
       </ul>
 
-      <p>Por eso es conocido por tener una estructura MVVM (Modelo -> Vista -> Lo que sea) </p>
+      <p>Por eso es conocido por tener una estructura MVVM (Modelo -> Vista -> Lo que sea).</p>
 
     </article>
   </slide>
@@ -183,6 +188,11 @@ URL: https://code.google.com/p/io-2012-slides
   </slide>
 
   <slide>
+  <aside class="note" >
+    <section>
+      <p><b>$Scopes</b> En los scopes se guarda la información de los modelos que se representan en la vista y también atributos que se utilizan para manejar la lógica de la misma.</p>
+    </section>
+  </aside>
     <hgroup>
       <h2>Ejemplo: {{name}} </h2>
     </hgroup>
@@ -321,37 +331,97 @@ URL: https://code.google.com/p/io-2012-slides
 
 
  <slide>
+   <hgroup>
+     <h2>Aplicación usando Servicios</h2>
+   </hgroup>
+   <article>
+      <chat></chat>
+   </article>
+ </slide>
+
+
+ <slide>
+    <article class="smaller">
+    <br>
+      <pre class="prettyprint" data-lang="html">
+&lt;div class="chat">
+    Nombre: &lt;input type="text" ng-model="username">
+    &lt;hr>
+  &lt;div <b>ng-cloak</b> ng-repeat="message in messages">
+    &lt;div class="talk-bubble" <b>ng-class-odd</b>="'tri-right left-in'"  <b>ng-class-even</b>="'tri-right rightside right-in'">
+      &lt;div class="talktext">
+      &lt;p>{{<b>message.from</b>}}:{{<b>message.content</b>}}&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>&lt;br/>
+    &lt;form <b>ng-submit</b>="addMessage()" >      
+    &lt;input type="text" ng-model="message" placeholder="Mensaje...">
+    &lt;button class="btn" type="submit">
+      &lt;i class="icon-reply"> Enviar&lt;/i>
+    &lt;/button>
+    &lt;/form>
+&lt;/div>
+      </pre>
+       <pre class="prettyprint" data-lang="javascript">
+          //Inyección de dependencias
+          var slide = angular.module('slide', ['firebase']);
+        
+       </pre>
+    </article>
+  </slide>
+
+   <slide>
+   <hgroup>
+     <h2>Manejo de servicios</h2>
+   </hgroup>
+    <article class="smaller">
+    <br>
+      <pre class="prettyprint" data-lang="javascript">
+        slide.directive('chat', function ($firebase) {
+          return {
+            restrict: 'E',
+            templateUrl: 'directives/chat.html' ,
+            controller: function ($scope) {
+                var ref = new Firebase('https://alejo.firebaseio.com/chat');
+                $scope.messages = $firebase(ref.limit(6));
+                $scope.username = 'Invitado ' + Math.floor(Math.random()*101);
+                $scope.addMessage = function() {
+                  $scope.messages.$add({
+                    from: $scope.username, content: $scope.message
+                  });
+                  $scope.message = "";
+                }
+            }
+          }
+        });
+      </pre>
+    </article>
+  </slide>
+
+ <slide>
   <hgroup>
-    <h2>Que nos beneficios trae?</h2>
+    <h2>Que beneficios trae?</h2>
   </hgroup>
   <article>
     <ul class="build fade" >
 
           <h3> - Mayor orden.</h3>
-          <h3> - Control total del DOM.</h3>
+          <h3> - Mejor control del DOM.</h3>
           <h3> - Velocidad.</h3>
-          <h3> - Aplicaciónes mas genericas.</h3>
+          <h3> - Aplicaciones mas genéricas.</h3>
           <h3> - Menos tiempo en desarrollo.</h3>
-          <h3> - Menor dependencia de tecnologias.</h3>
+          <h3> - Menor dependencia de tecnologías.</h3>
 
     </ul>
   </article>
  </slide>
 
   <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
     <hgroup>
       <h2>Diversificación:</h2>
     </hgroup>
     <article>
-     <p>Actualmente Angular Js, esta comenzado ha impactar mucho en el desarrollo Front-end , tanto que muchos Forks de javascript he incluso , frameworks  han comenzado ha crear versiones para Angular Js , mas conocidas como librerias,</p>
+     <p>Actualmente Angular Js, esta comenzado ha impactar mucho en el desarrollo Front-end , tanto que muchos Forks de javascript he incluso , frameworks  han comenzado ha crear versiones para Angular Js , mas conocidas como librerías,</p>
 
      <h3>Entre ellos:</h3>
         <ul >
@@ -369,7 +439,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Continuo Desarrollo:</h2>
     </hgroup>
     <article>
-     <p>Angular ha demostrado que en poco tiempo ha avanzado demasiado, es tal el avance que posiblemente sea uno de los proyectos de javascript, con mas liberacion de versiones al año.</p>
+     <p>Angular ha demostrado que en poco tiempo ha avanzado demasiado, es tal el avance que posiblemente sea uno de los proyectos de javascript, con mas liberación de versiones al año.</p>
 
      <p>Una de sus mayores inteciones es crear un framework , con la menor cantidad de dependencias posibles, hasta ahora es uno de los cuantos frameworks Front- end que no necesita JQuery.</p>
     <img src="images/castor.png" style="float:right;" class="reflect" alt="">
@@ -391,7 +461,7 @@ URL: https://code.google.com/p/io-2012-slides
     <article>
      <p>"En plena “era HTML5″ y Web 2.0 pocos son los que discuten que Javascript y CSS3 son los reyes absolutos en lo que respecta al desarrollo “front-end”. Los sitios web son mucho más dinámicos (algunas web´s ya parecen incluso verdaderas aplicaciones de escritorio) de forma que la experiencia del usuario mejora notablemente."</p>
 
-     <p>Angular Js no solo ha mostrado, un nuevo camino en el Front-end, si no que tambien ha mejorado la experencia de las aplicaciones web.</p>
+     <p>Angular Js no solo ha mostrado, un nuevo camino en el Front-end, si no que también ha mejorado la experiencia de las aplicaciones web.</p>
     <img src="images/angularjs.png" style="float:right;" class="reflect" alt="">
     </article>
   </slide>
@@ -416,7 +486,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h2 class="white">Conlusión</h2>
     </hgroup>
     <article  class="white" >
-      <p>Angular sin duda puede ser una gran herramienta, durante el tiempo que la he utilizado, realmente me he sentido muy a gusto, de verdad que es muy facil desarrollar aplicaciónes de esta manera. </p>
+      <p>Angular sin duda puede ser una gran herramienta, durante el tiempo que la he utilizado, realmente me he sentido muy a gusto, de verdad que es muy fácil  desarrollar aplicaciones de esta manera. </p>
 
       <p>Los invito ha usarla, si tienen dudas o preguntas al respecto con mucho gusto tratare de ayudarles en lo que mas pueda.</p>
 

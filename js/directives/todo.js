@@ -14,7 +14,7 @@ slide.directive('todoex', [function () {
 					price: 400,
 					active:false
 				},{
-					name: 'Integracion',
+					name: 'Integración',
 					price: 250,
 					active:false
 				},{

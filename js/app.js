@@ -1,1 +1,1 @@
-var slide = angular.module('slide', []);
+var slide = angular.module('slide', ['firebase']);
