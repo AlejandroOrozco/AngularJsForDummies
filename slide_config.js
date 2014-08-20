@@ -19,7 +19,7 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: 'Alejandro Orozco Builes',
-    company: 'Practicante, Intergrupo',
+    company: 'Ingeniero, Intergrupo',
     gplus: 'aorozcobuiles@gmail.com',
     twitter: 'aorozcob@intergrupo.com',
     www: 'IG Mobile',
